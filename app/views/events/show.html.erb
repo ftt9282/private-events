@@ -1,0 +1,8 @@
+<%= render @event %>
+<h3>Attendees:</h3>
+<ol>
+<% @event.attendees.each do |attendee| %>
+   <li><%= link_to attendee.username, attendee %></li>
+<% end %>
+</ol>
+<h4>Creator is: <%= creator(@event.event_creator_id).username %></h4>
